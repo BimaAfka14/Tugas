@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    padding: 30px;
+}
+
+nav {
+    float: left;
+    width: 30%;
+    
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 8px 16px;
+    color: none;
+}
+
+nav ul li a:hover {
+    background-color: blue;
+    color: crimson;
+}
+/* ffffffffffffu */
+article {
+    padding: 0px 20px;
+    float: left;
+    width: 70%;
+}
+
+footer {
+    text-align: center;
+}
+
+.utkspan {
+    font-size: 57px;
+    color: orangered;
+}

@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+  
+html {
+    box-sizing: border-box;
+}
+  
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+  
+.column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+}
+  
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+}
+  
+.about-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #474e5d;
+    color: white;
+    text-transform: capitalize;
+}
+  
+.container2 {
+    padding: 0 16px;
+}
+  
+.container2::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+  
+.title {
+    color: grey;
+}
+  
+.button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+}
+  
+.button:hover {
+    background-color: #555;
+}
+
+.container{
+    max-width: 80%;
+    margin-inline: auto;
+}
+
+.navigation .box-navigation{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0 15px 0;
+    align-items: center;
+}
+
+.navigation .box-navigation .logo h1{
+    color: black;
+    font-size: 32px;
+}
+
+.navigation .box-navigation .logo span{
+    color: #ff3838;
+    font-size: 32px;
+}
+
+.navigation .box-navigation .menu-navigation ul{
+    display: flex;
+}
+
+.navigation .box-navigation .menu-navigation ul li{
+    list-style-type: none;
+    margin-right: 40px;
+}
+
+.navigation .box-navigation .menu-navigation ul li a{
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.navigation .box-navigation .menu-navigation ul li a:hover{
+    color: #ff3838;
+}
+
+.navigation .box-navigation .menu-navigation ul li i{
+    display: none;
+}
+
+.navigation .box-navigation .menu-bar{
+    display: none;
+}
+
+.navigation .box-navigation .menu-bar i{
+    font-size: 26px;
+}
+  
+@media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+}

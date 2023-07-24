@@ -1,0 +1,138 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Latihan Menggunakan Javascript</title> 
+</head> 
+<body> 
+    <h1>Latihan menggunakan Javascript</h1>
+
+    <p>Ada banyak hal yang bisa kita lakukan dengan Javascript.</p>
+        
+    <script>
+        //'alert' berfungsi memunculkan pop-up message yang muncul setiap kali kamu mengunjungi halaman ini 
+        window.alert("Selamat datang di halaman percobaan minggu 10");
+        
+        //console.log berfungsi memunculkan pesan khusus yang hanya dapat dilihat
+        //oleh para developer dalam "Console Log" yang dapat diakses melalui jendela inspect element
+        console.log("Rahasia antara kita berdua saja, tapi aku pernah mengompol di kelas 3 SD"); 
+        
+        //Javascript atau disingkat JS juga mampu digunakan untuk memunculkan konten sebuah website
+        //alih-alih menggunakan HTML, walaupun sebenarnya bukan ini fungsi utamanya
+        document.write("Sebagai contoh, blok paragraf ini ditulis menggunakan javascript dan bukan sekedar paragraf biasa."); 
+        
+    </script> 
+
+    <p>Cek lah <i>inspect element</i> atau tekan F12 agar kamu percaya.<br>
+        Ini bukanlah ajakan, ini adalah <b>ancaman.</b><br>
+        Lakukan sekarang juga atau SLENDERMAN akan berada ditempat tidurmu <b>malam ini.</b></p>
+
+    <p>
+        Kita juga bisa menyisipkan sebuah pesan dalam sebuah link, contohnya seperti  
+        <a href="#" onclick="alert('Hai! Pesan ini hanya akan muncul ketika kamu menekan linknya.')">ini.</a> 
+    </p>
+
+    <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+    <h2>Sesuatu yang lebih keren lagi</h2>
+    
+    <p>
+        Apakah kamu putus asa karena tidak bisa memegang kendali atas apapun dalam kehidupanmu?
+    </p>
+
+    <p>
+        Dengan Javascript, kamu bisa memperbaiki segalanya!
+        Mulailah dengan mengendalikan paragraf berisi konten negatif seperti dibawah ini.
+    </p>
+
+        <div id="konten-negatif" style="color:blue;">
+            <p style="color:red;">
+
+                <b>Kentang goreng sangatlah tidak enak!!!!!!! Makanan orang barbar, makanan orang tidak berbudaya!!!!</b>
+            
+            </p>
+        </div> 
+
+    <p>Bagaimana caranya? Dengan sebuah tombol.</p>
+
+    <script> 
+        // membuat objek elemen 
+        var hasil = document.getElementById("konten-negatif"); 
+
+    /*  // menampilkan output ke elemen hasil 
+        hasil.innerHTML = "<p>Kentang itu tentunya sangat enak sekali kali kali.</p>";
+    */
+    </script>
+
+    <button onClick="hasil.innerHTML='<h3>Kentang goreng tentunya makanan terenak yang pernah diciptakan umat manusia, tidak akan ada lagi yang pernah menyainginya.</h3>'">
+        Perbaiki hidupmu
+    </button> 
+
+    <br>
+
+        <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+    <h2>Menggila dengan Javascript</h2>
+
+    <p>Apa kalian tahu bahwa kalian dapat membuat kalkulator sederhana hanya dengan menggunakan Javascript?</p>
+
+    <p>Kemarin kita belajar membuat formulir, sekarang kita gunakan lagi ilmu itu, tapi untuk membuat kalkulator.</p>
+
+    <script>
+        //script ini lah yang membuat 'sihir' aritmatika kita dapat bekerja sebagaimana mestinya 
+        function hitung()
+        {
+            var myForm = document.itungHitungan;
+            var a = eval(myForm.bil1.value);
+            var b = eval(myForm.bil2.value);
+            var oper = myForm.opr.value;
+
+            if (oper=="+")
+            {
+                var c = a+b;
+            }
+            else if (oper=="-")
+            {
+                var c = a-b;
+            }
+            else if (oper=="*")
+            {
+                var c = a*b;
+            }
+            else if (oper=="/")
+            {
+                var c = a/b;
+            }
+
+            myForm.hasil.value = c;
+        }
+    </script>
+
+    <form name="itungHitungan" action="#">
+        bilangan pertama :<input type="number" name="bil1"><br>
+        operasi hitung :
+        <select name="opr">
+            <option value="+">+ (Tambah)</option>
+            <option value="-">- (Kurang)</option>
+            <option value="*">* (Kali)</option>
+            <option value="/">/ (Bagi)</option>
+        </select><br>
+        bilangan kedua :<input type="number" name="bil2"><br>
+        <input type="button" value="=" onclick="hitung()"> 
+        <input type="number" name="hasil" disabled>
+    </form>
+
+    <p>Sekian dari saya, tetaplah berada di jalan setan.</p>
+
+    <script>
+        //disini merupakan script yang menanyakan konfirmasi apakah pengunjung benar2 ingin melihat halaman ini
+        var yakin = confirm("Apakah kamu benar-benar YAKIN ingin melihat halaman ini? (Memilih 'Cancel' akan membawamu kembali ke halaman utama)"); 
+     
+        if (yakin) { 
+            document.write("<p>Anda memilih untuk melihat halaman ini :)</p>"); 
+        }
+        else {            
+            window.location = ".."; 
+        } 
+    </script>
+</body> 
+</html>

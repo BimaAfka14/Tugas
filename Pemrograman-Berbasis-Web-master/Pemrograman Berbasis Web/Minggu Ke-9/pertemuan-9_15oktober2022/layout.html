@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"></meta>
+        <meta name="description" content="Latihan Semantic Element"></meta>
+        <meta name="keyword" content="HTML, CSS, Javascript, Semantic"></meta>
+        <meta name="author" content="Bima Afkanur Rifqi"></meta>
+        <meta name="viewport" content="width-device-width, initial-scale=1.0"></meta>
+        <title>Semantic Element - HTML 5</title>
+        <link rel="stylesheet" type="text/css" href="csscode.css">
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            header{
+                border: 1px solid gray;
+                padding: 25px;
+            }
+            .row::after{
+                content: "";
+                clear: both;
+                display: table;
+            }
+            [class*=".col-"]{
+                float: left;
+                padding: 10px;
+                border: 1px solid gray;
+            }
+            .col-1{width: 8.33%;}
+            .col-2{width: 16.66%;}
+            .col-3{width: 25%;}
+            .col-4{width: 33.33%;}
+            .col-5{width: 41.66%;}
+            .col-6{width: 50%;}
+            .col-7{width: 58.33%;}
+            .col-8{width: 66.66%;}
+            .col-9{width: 75%;}
+            .col-10{width: 83.33%;}
+            .col-11{width: 91.66%;}
+            .col-12{width: 100%;}
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Judul Halaman</h1>
+        </header>
+        <main class="row">
+            <nav class="col-3">
+                <ul>
+                    <li>Menu 1</li>
+                    <li>Menu 2</li>
+                </ul>
+            </nav>
+            <article class="col-9">
+                <h4>Judul Artikel</h4>
+                <p>
+                    Lorem ipsum di site color <span class="dua">Lorem</span> ipsum di site color Ipsum di site color
+                    lorem ipsum di site color lorem ipsum di site color.
+                </p>
+            </article>
+        </main>
+        <footer class="col-12">
+            Copyright <i>&copy;</i> PBW 2022
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title> Latihan Form </title>
+        </head>
+        <body>
+            <h1> Form - HTML</h1>
+            <Form name="flat" method="post" action="proses.php">
+                Isilah Form Dibawah Ini
+                <table>
+                    <tr>
+                        <td>Nama Lengkap :</td>
+                        <td><input type="text" name="fnama" required></td>
+                    </tr>
+                    <tr>
+                        <td>Email : </td>
+                        <td><input type="email" name="femail" required></td>
+                    </tr>
+                    <tr>
+                        <td>Alamat Rumah : </td>
+                        <table>
+                            <tr>
+                                <td>RT :</td>
+                                <td><input type="number" name="frt" required></td>
+                            </tr>
+                            <tr>
+                                <td>RW :</td>
+                                <td><input type="number" name="frw" required></td>
+                            </tr>
+                            <tr>
+                                <td>Kelurahan : </td>
+                                <td><input type="text" name="fkelurahan" required></td>
+                            </tr>
+                            <tr>
+                                <td>Kecamatan : </td>
+                                <td><input type="text" name="fkecamatan" required></td>
+                            </tr>
+                            <tr>
+                                <td>Kabupaten : </td>
+                                <td><input type="text" name="fkabupaten" required></td>
+                            </tr>
+                            <tr>
+                                <td>Provinsi : </td>
+                                <td><input type="text" name="fprovinsi" required></td>
+                            </tr>
+                        </table>
+                </table>
+                <table>
+                    </tr>
+                    <tr>
+                        <td>Nomor Telepon : </td>
+                        <td><input type="number" name="fnotel" required></td>
+                    </tr>
+                    <tr>
+                        <td>NIM : </td>
+                        <td><input type="string" name="fnim" required></td>
+                    </tr>
+                    <tr>
+                        <td>Tanggal Lahir : </td>
+                        <td><input type="date" name="ftanggal"></td>
+                    </tr>
+                    <tr>
+                        <td>Tempat Lahir : </td>
+                        <td><input type="text" name="ftempat"></td>
+                    </tr>
+                    <tr>
+                        <td>Fakultas : </td>
+                        <td>
+                            <select name="ffakultas" required>
+                                <option value="1">Pilih</option>
+                                <option value="2">Fakultas Ilmu Komputer</option>
+                                <option value="3">Fakultas Ekonomi dan Bisnis</option>
+                                <option value="4">Fakultas Ilmu dan Budaya</option>
+                                <option value="5">Fakultas Teknik</option>
+                                <option value="6">Fakultas Kesehatan</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Bidang Minat : </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="fbm1" value="1"><label>Divisi Mobile</label><br>
+                            <input type="checkbox" name="fbm2" value="2"><label>Divisi Destop</label><br>
+                            <input type="checkbox" name="fbm3" value="3"><label>Divisi Multimedia</label><br>
+                            <input type="checkbox" name="fbm4" value="4"><label>Divisi Jaringan</label><br>
+                            <input type="checkbox" name="fbm5" value="5"><label>Divisi Web</label><br>
+                            <input type="checkbox" name="fbm6" value="6"><label>Divisi Penyiaran</label><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Bukti Screenshot : </td>
+                        <td><input type="file" name="fss" required></td>
+                    </tr>
+                    <tr>
+                        <td align="right"><input type="submit" name="fsubmit"><input type="reset" name="freset"></td>
+                    </tr>
+                </table>
+            </Form>
+        </body>
+    </html>    
+</DOCTYPE html>

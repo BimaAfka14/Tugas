@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Bima Afkanur Rifqi" content="HTML, CSS, Javascript, Online Shop, E-Commerce">
+    <meta name="E-Commerce" content="E-Commerce">
+    <link rel="shortcut icon" href="assets/image/Artboard 1.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- magnific-popup css cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="dist/css/style3.css">
+
+</head>
+<body>
+<!--Navigation-->
+<section class="navigation">
+    <div class="container">
+        <div class="box-navigation">
+            <!--Kolom Pertama-->
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none">
+                    <h1>
+                        <span>
+                            LOP
+                        </span> 
+                        SHOP
+                    </h1>
+                </a>
+            </div>
+            <!--Kolom Pertama-->
+            <!--Kolom Kedua-->
+            <div class="menu-navigation">
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                        <i class="fa-solid fa-home"></i>
+                    </li>
+                    <li>
+                        <a href="index4.html">About</a>
+                        <i class="fa-solid fa-circle-info"></i>
+                    </li>
+                    <li>
+                        <a href="index2.html">Product</a>
+                        <i class="fa-solid fa-coins"></i>
+                    </li>
+                    <li>
+                        <a href="index3.html">Gallery</a>
+                        <i class="fa-solid fa-image"></i>
+                    </li>
+                    <li>
+                        <a href="index5.html">Contact</a>
+                        <i class="fa-solid fa-phone"></i>
+                    </li>
+                </ul>
+            </div>
+            <!--Kolom Kedua-->
+
+            <!--Kolom Ketiga-->
+            <div class="menu-bar">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <!--Kolom Ketiga-->
+        </div>
+    </div>
+</section>
+<!--Navigation-->
+
+<div class="gallery">
+
+    <ul class="controls">
+        <li class="buttons active" data-filter="all">all</li>
+        <li class="buttons" data-filter="ice-cream">Smartphone</li>
+        <li class="buttons" data-filter="chocolate">Laptop</li>
+        <li class="buttons" data-filter="cake">Computer</li>
+        <li class="buttons" data-filter="juice">Accesories</li>
+    </ul>
+
+    <div class="image-container">
+
+        <a href="assets/image/smartphone1.png" class="image smartphone">
+            <img src="assets/image/smartphone1.png" alt="">
+        </a>
+        <a href="assets/image/laptop1.png" class="image laptop">
+            <img src="assets/image/laptop1.png" alt="">
+        </a>
+        <a href="assets/image/laptop2.png" class="image laptop">
+            <img src="assets/image/laptop2.png" alt="">
+        </a>
+
+        <a href="assets/image/laptop3.png" class="image laptop">
+            <img src="assets/image/laptop3.png" alt="">
+        </a>
+        <a href="assets/image/laptop4.png" class="image laptop">
+            <img src="assets/image/laptop4.png" alt="">
+        </a>
+
+        <a href="assets/image/computer.png" class="image computer">
+            <img src="assets/image/computer.png" alt="">
+        </a>
+        <a href="assets/image/accesories.png" class="image accesories">
+            <img src="assets/image/accesories.png" alt="">
+        </a>
+    </div>
+</div>
+
+
+<!-- jquery cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- magnific popup js cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+<script>
+
+$(document).ready(function(){
+
+    $('.buttons').click(function(){
+
+        $(this).addClass('active').siblings().removeClass('active');
+
+        var filter = $(this).attr('data-filter')
+
+        if(filter == 'all'){
+            $('.image').show(400);
+        }else{
+            $('.image').not('.'+filter).hide(10);
+            $('.image').filter('.'+filter).show(20);
+        }
+
+    });
+
+    $('.gallery').magnificPopup({
+
+        delegate:'a',
+        type:'image',
+        gallery:{
+            enabled:true
+        }
+
+    });
+
+});
+
+</script>
+    
+</body>
+</html>
